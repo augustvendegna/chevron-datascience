@@ -1,10 +1,20 @@
-
-<body ng-controller="websiteOne">
-
-    <h2>Username:</h2>
-    <input type="text" [(ngModel)]="username"><br>
-    <h2>Password:</h2>
-    <input type="text" [(ngModel)]="password"><br>
+<div > 
     
-    <button (click) = "login()">Login</button>
-</body>
+    <div class = "parent">
+        <div class = "chlid">
+            <h1 class = "title"> chevron data science challenges </h1>
+            <h1>sign in:</h1>
+            <h2>username</h2>
+        
+            <input type="text" [(ngModel)]="username"><br>
+
+            <h2>password</h2>
+            <input type="text" [(ngModel)]="password"><br><br>
+            <div class = "button">
+                <button class="button"(click) = "login()"> login</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    
