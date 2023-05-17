@@ -9,14 +9,17 @@
     left: 50vw;
     transform: translate(-50%, -50%);
     padding: 10px;
-    //border: solid;
-    border-radius: 20px;
-    border-color: black;
-    color: #0066b2;
-    box-shadow: 0px 1px 10px 1px #0b2d71;
+    
 }
 
-
+.child {
+  padding: 7px;
+  border: solid;
+  border-radius: 20px;
+  border-color: black;
+  color: #0066b2;
+  box-shadow: 0px 1px 10px 1px #0b2d71;
+}
 
 /* CSS */
 .button {
@@ -46,6 +49,37 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 100%;
+}
+
+.signUp {
+  position: relative;
+  left: 40%;
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #0056A2;
+  border-radius: 20px;
+  border-width: 1;
+  box-shadow: 0px 1px 6px 1px #2FA1D3;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Helvetica;
+  font-size: 100%;
+  height: 30px;
+  line-height: 1;
+  margin: 0 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 0;
+  position: center;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
 }
 
 .button:disabled {
