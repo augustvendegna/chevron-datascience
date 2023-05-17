@@ -1,12 +1,12 @@
-<div > 
+<div *ngIf="!clickedSignUp"> 
     
     <div class = "parent">
         <div class = "child">
             <h1 class = "title"> chevron data science challenges </h1>
             <h1>sign in:</h1>
-            <h2>username</h2>
+            <h2>email</h2>
         
-            <input class="input" type="text" placeholder='enter username' [(ngModel)]="username"><br>
+            <input class="input" type="text" placeholder='enter email' [(ngModel)]="username"><br>
 
             <h2>password</h2>
             <input class="input" type="text" placeholder='enter password' [(ngModel)]="password"><br><br>
@@ -18,4 +18,43 @@
         <button class ="signUp"(click) = "onSignUpClick()"> sign up</button>
     </div>
 </div>
+
+<div *ngIf="clickedSignUp"> 
+    
+    <div class = "parent">
+        <div class = "child">
+            <h1 class = "title"> create new account </h1>
+            <div class="two-col">
+                <div class="first">
+                    <p>first name</p>
+                    <input class="input" type="text" placeholder='your first name' [(ngModel)]="username">
+                </div>
+                <div class="last">
+                    <p>last name</p>
+                    <input class="input" type="text" placeholder='your last name' [(ngModel)]="username">
+                </div>
+            </div><br>
+
+            <p>your email (@chevron.com)</p>
+            <input class="input" type="text" placeholder='enter email' [(ngModel)]="password">
+            
+            <p>password</p>
+            <body>
+                minimum password requirements: <br>
+                 - 8 letters <br>
+                 - 1 capital<br>
+                 - 1 number<br>
+
+            </body>
+            <input class="input" type="text" placeholder='enter password' [(ngModel)]="password">
+            <p>confirm password</p>
+            <input class="input" type="text" placeholder='enter password' [(ngModel)]="password"><br><br>
+            <div class = "button">
+                <button class="button"(click) = "login()"> sign up!</button>
+            </div>
+            
+        </div><br>
+    </div>
+</div>
+
     

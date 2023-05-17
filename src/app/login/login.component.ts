@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 export class LoginComponent {
   public username: string;
   public password: string;
+  public clickedSignUp: boolean;
   // const { Pool, Client } = require("pg"); // idk what that is
   //Client = require("pg");
   dbCreds = {
@@ -18,16 +20,20 @@ export class LoginComponent {
   };
 
   constructor(){
+    this.clickedSignUp = false;
   }
   
   public onSignUpClick(){
     
+    this.clickedSignUp = true;
+    console.log(this.clickedSignUp);
+    
   }
 
   public login() {
+    //console.log('Username: ' + this.username);
+    //console.log('Password: ' + this.password);
     
-    console.log('Username: ' + this.username);
-    console.log('Password: ' + this.password);
     //this.writeCreds();
   }
 
