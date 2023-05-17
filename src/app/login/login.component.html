@@ -1,3 +1,9 @@
+<ng-content></ng-content>
+<a class="type-toggle" (click)="toggleShow()">
+	<ion-icon class="show-option" [hidden]="showPassword" name="eye-off-outline"></ion-icon>
+	<ion-icon class="hide-option" [hidden]="!showPassword" name="eye-outline"></ion-icon>
+</a>
+
 <div *ngIf="!clickedSignUp"> 
     
     <div class = "parent">
@@ -9,7 +15,7 @@
             <input class="input" type="text" placeholder='enter email' [(ngModel)]="username"><br>
 
             <h2>password</h2>
-            <input class="input" type="text" placeholder='enter password' [(ngModel)]="password"><br><br>
+	    <ion-item><app-login><ion-input class="input" type="password" placeholder='enter password' [(ngModel)]="password"></ion-input></app-login></ion-item><br><br>
             <div class = "button">
                 <button class="button"(click) = "login()"> login</button>
             </div>

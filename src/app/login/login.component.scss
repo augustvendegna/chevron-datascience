@@ -107,6 +107,16 @@
 	transition: background 0.25s, border-color 0.25s, color 0.25s;
 }
 
+.type-toggle {
+	padding-inline-start: 0.5rem;
+}
+
+.show-option,
+	.hide-option {
+		font-size: 1.2rem;
+		display: block;
+}
+
 .two-col {
   overflow: hidden;
 }

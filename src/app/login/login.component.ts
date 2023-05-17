@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import { Component, ContentChild } from '@angular/core';
-=======
-import { Component } from '@angular/core';
 import { AppComponent } from '../app.component';
->>>>>>> refs/remotes/origin/main
+import { IonicModule, IonInput } from '@ionic/angular';
+import { NgModule } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-login',
@@ -14,6 +14,8 @@ export class LoginComponent {
   public username: string;
   public password: string;
   public clickedSignUp: boolean;
+  public showPassword = false;
+
   // const { Pool, Client } = require("pg"); // idk what that is
   //Client = require("pg");
   dbCreds = {
@@ -23,10 +25,18 @@ export class LoginComponent {
     port: 5432,
   };
 
+  @ContentChild(IonInput) input: IonInput;
+
   constructor(){
     this.clickedSignUp = false;
   }
-  
+ 
+  public toggleShow() {
+	  this.showPassword = !this.showPassword;
+	  this.input.type = this.showPassword ? 'text' : 'password';
+  }
+
+
   public onSignUpClick(){
     
     this.clickedSignUp = true;
