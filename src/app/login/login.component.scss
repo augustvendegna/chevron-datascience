@@ -55,3 +55,21 @@
 .button:focus {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 3px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
+
+.input {
+	-webkit-appearance: none;
+	width: 100%;
+	max-width: 425px;
+	min-height: calc(0.9em + (0.8em * 2) + 0.4em);
+
+	padding: 0.8em;
+	font-size: 0.9em;
+	font-family: Helvetica; 
+	outline: none;
+	border: 1px solid #dddddd;
+
+	border-radius: 4px;
+	background: #f9f9f9;
+	transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+

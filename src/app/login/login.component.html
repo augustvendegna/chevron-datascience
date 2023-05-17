@@ -6,10 +6,10 @@
             <h1>sign in:</h1>
             <h2>username</h2>
         
-            <input type="text" [(ngModel)]="username"><br>
+            <input class="input" type="text" placeholder='enter username' [(ngModel)]="username"><br>
 
             <h2>password</h2>
-            <input type="text" [(ngModel)]="password"><br><br>
+            <input class="input" type="text" placeholder='enter password' [(ngModel)]="password"><br><br>
             <div class = "button">
                 <button class="button"(click) = "login()"> login</button>
             </div>
