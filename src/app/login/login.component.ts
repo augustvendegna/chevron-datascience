@@ -67,9 +67,50 @@ export class LoginComponent {
       this.validInfo = false;
     }
 
+
+    if (this.passwordOne.length >= 8) {
+	    console.log("minimum length achieved");
+    } else {
+	    console.log("not minimum length");
+	    this.validInfo = false;
+    }
+
+    var character = '';
+    var i = 0;
+    while (i <= this.passwordOne.length){
+	character = this.passwordOne.charAt(i);
+	if (!isNaN(parseInt(character))) {
+		console.log("character is a number");
+		break;
+	
+	} 
+       i++;
+    }
+
+    while (i <= this.passwordOne.length) {
+	character = this.passwordOne.charAt(i);
+		if (character.match(character.toUpperCase())) {
+			console.log("character is uppercase");
+			break;
+		}
+		else {
+			console.log("needs uppercase");
+		}
+	i++;
+    }
+
+    /*if (this.passwordOne.match('^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$')) {
+	    console.log("Minimum password requirements are met!"); 
+    } else{
+	    console.log("At least one of the password requirements are not met!");
+	    this.validInfo = false;
+    }*/
+
+
     if (this.validInfo){
       console.log("Sending information to database.");
     }
+
 
   }
   
