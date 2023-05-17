@@ -1,8 +1,7 @@
-import { Component, ContentChild } from '@angular/core';
+import { NgModule, Component, ContentChild } from '@angular/core';
 import { AppComponent } from '../app.component';
-import { IonicModule, IonInput } from '@ionic/angular';
-import { NgModule } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -14,7 +13,6 @@ export class LoginComponent {
   public username: string;
   public password: string;
   public clickedSignUp: boolean;
-  public showPassword = false;
 
   // const { Pool, Client } = require("pg"); // idk what that is
   //Client = require("pg");
@@ -25,18 +23,11 @@ export class LoginComponent {
     port: 5432,
   };
 
-  @ContentChild(IonInput) input: IonInput;
 
   constructor(){
     this.clickedSignUp = false;
   }
  
-  public toggleShow() {
-	  this.showPassword = !this.showPassword;
-	  this.input.type = this.showPassword ? 'text' : 'password';
-  }
-
-
   public onSignUpClick(){
     
     this.clickedSignUp = true;
