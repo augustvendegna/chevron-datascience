@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ContentChild } from '@angular/core';
+import { IonInput } from '
 
 @Component({
   selector: 'app-login',
