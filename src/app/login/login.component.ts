@@ -20,6 +20,10 @@ export class LoginComponent {
   constructor(){
   }
   
+  public onSignUpClick(){
+    
+  }
+
   public login() {
     
     console.log('Username: ' + this.username);
