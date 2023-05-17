@@ -10,8 +10,13 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  public username: string;
+  public validInfo: boolean;
+  public first: string;
+  public last: string;
+  public email: string;
   public password: string;
+  public passwordOne: string;
+  public passwordTwo: string;
   public clickedSignUp: boolean;
 
   // const { Pool, Client } = require("pg"); // idk what that is
@@ -26,6 +31,7 @@ export class LoginComponent {
 
   constructor(){
     this.clickedSignUp = false;
+    this.validInfo = true;
   }
  
   public onSignUpClick(){
@@ -34,6 +40,39 @@ export class LoginComponent {
     console.log(this.clickedSignUp);
     
   }
+
+  public createAccount(){
+    console.log("user wants to create account");
+
+    if (this.first == null || this.last == null || this.email == null || this.passwordOne == null || this.passwordTwo == null) {
+      console.log("Empty fields found.")
+      this.validInfo = false;
+    }
+
+    if (this.email.includes('@chevron.com')){
+      console.log("Email is valid");
+      
+    }
+    else{
+      console.log("Email does not belong to chevron!");
+      this.validInfo = false;
+    }
+
+    if (this.passwordOne === this.passwordTwo && this.passwordOne != null) {
+      console.log("Provided passwords match!");
+      
+    }
+    else{
+      console.log("Passwords do not match!");
+      this.validInfo = false;
+    }
+
+    if (this.validInfo){
+      console.log("Sending information to database.");
+    }
+
+  }
+  
 
   public login() {
     //console.log('Username: ' + this.username);

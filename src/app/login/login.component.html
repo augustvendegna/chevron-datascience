@@ -7,7 +7,7 @@
             <h1>sign in:</h1>
             <h2>email</h2>
         
-            <input class="input" type="text" placeholder='enter email' [(ngModel)]="username"><br>
+            <input class="input" type="text" placeholder='enter email' [(ngModel)]="email"><br>
 
             <h2>password</h2>
 	    <input class="input" type="password" placeholder='enter password' [(ngModel)]="password"><br><br>
@@ -28,16 +28,16 @@
             <div class="two-col">
                 <div class="first">
                     <p>first name</p>
-                    <input class="input" type="text" placeholder='your first name' [(ngModel)]="username">
+                    <input class="input" type="text" placeholder='your first name' [(ngModel)]="first">
                 </div>
                 <div class="last">
                     <p>last name</p>
-                    <input class="input" type="text" placeholder='your last name' [(ngModel)]="username">
+                    <input class="input" type="text" placeholder='your last name' [(ngModel)]="last">
                 </div>
             </div><br>
 
             <p>your email (@chevron.com)</p>
-            <input class="input" type="text" placeholder='enter email' [(ngModel)]="password">
+            <input class="input" type="text" placeholder='enter email' [(ngModel)]="email">
             
             <p>password</p>
             <body>
@@ -47,11 +47,11 @@
                  - 1 number<br>
 
             </body>
-            <input class="input" type="text" placeholder='enter password' [(ngModel)]="password">
+            <input class="input" type="password" placeholder='enter password' [(ngModel)]="passwordOne">
             <p>confirm password</p>
-            <input class="input" type="text" placeholder='enter password' [(ngModel)]="password"><br><br>
+            <input class="input" type="password" placeholder='enter password' [(ngModel)]="passwordTwo"><br><br>
             <div class = "button">
-                <button class="button"(click) = "login()"> sign up!</button>
+                <button class="button"(click) = "createAccount()"> sign up!</button>
             </div>
             
         </div><br>
