@@ -1,5 +1,5 @@
 
-<div *ngIf="!clickedSignUp"> 
+<div *ngIf="!clickedSignUp && validInfo"> 
     
     <div class = "parent">
         <div class = "child">
@@ -20,7 +20,7 @@
     </div>
 </div>
 
-<div *ngIf="clickedSignUp"> 
+<div *ngIf="clickedSignUp && validInfo"> 
     
     <div class = "parent">
         <div class = "child">
@@ -59,3 +59,9 @@
 </div>
 
     
+<div class = badInfo *ngIf="!validInfo">
+
+    <h1>uh oh!</h1>
+    <p>one or more of your entires was either invalid or missing entirely. please try again.</p>
+    <button class="button"(click) = "validInfo = true"> try again</button>
+</div>
